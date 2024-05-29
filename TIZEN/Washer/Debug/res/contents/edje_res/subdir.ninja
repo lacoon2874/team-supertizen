@@ -1,0 +1,9 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+
+edctool = edje_cc
+edcflags = -id "C:/project/git-repo/S10P21S006/TIZEN/Washer/edje/images" -id  "C:/project/git-repo/S10P21S006/TIZEN/Washer/res/contents/edje_res" -id "C:/tizen-studio/tools/edc-editor/share/enventor/images" -sd "C:/project/git-repo/S10P21S006/TIZEN/Washer/edje/sounds" -sd  "C:/project/git-repo/S10P21S006/TIZEN/Washer/res/contents/edje_res" -sd "C:/tizen-studio/tools/edc-editor/share/enventor/sounds" -fd "C:/project/git-repo/S10P21S006/TIZEN/Washer/edje/fonts" -fd  "C:/project/git-repo/S10P21S006/TIZEN/Washer/res/contents/edje_res" -fd "C:/tizen-studio/tools/edc-editor/share/enventor/fonts"
+
+build res/contents/edje_res/sample.edj: build_edc ../res/contents/edje_res/sample.edc 

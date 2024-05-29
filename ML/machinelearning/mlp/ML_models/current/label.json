@@ -1,0 +1,107 @@
+{
+	"male_Interview": {
+		"count": 0,
+		"label_list": []
+	},
+	"female_Interview": {
+		"count": 0,
+		"label_list": []
+	},
+	"male_Graduate": {
+		"count": 0,
+		"label_list": [
+		]
+	},
+	"female_Graduate": {
+		"count": 0,
+		"label_list": []
+	},
+	"male_Date": {
+		"count": 0,
+		"label_list": []
+	},
+	"female_Date": {
+		"count": 0,
+		"label_list": []
+	},
+	"male_Business": {
+		"count": 0,
+		"label_list": []
+	},
+	"female_Business": {
+		"count": 0,
+		"label_list": []
+	},
+	"male_Trip": {
+		"count": 0,
+		"label_list": []
+	},
+	"female_Trip": {
+		"count": 0,
+		"label_list": []
+	},
+	"male_Workout": {
+		"count": 0,
+		"label_list": []
+	},
+	"female_Workout": {
+		"count": 0,
+		"label_list": []
+	},
+	"male_Rest": {
+		"count": 0,
+		"label_list": []
+	},
+	"female_Rest": {
+		"count": 0,
+		"label_list": []
+	},
+	"male_Wedding": {
+		"count": 0,
+		"label_list": []
+	},
+	"female_Wedding": {
+		"count": 0,
+		"label_list": []
+	},
+	"male_Meeting": {
+		"count": 0,
+		"label_list": []
+	},
+	"female_Meeting": {
+		"count": 0,
+		"label_list": []
+	},
+	"male_Event": {
+		"count": 0,
+		"label_list": []
+	},
+	"female_Event": {
+		"count": 0,
+		"label_list": []
+	},
+	"male_Daily": {
+		"count": 0,
+		"label_list": []
+	},
+	"female_Daily": {
+		"count": 0,
+		"label_list": []
+	},
+	"male_ETC": {
+		"count": 0,
+		"label_list": []
+	},
+	"female_ETC": {
+		"count": 0,
+		"label_list": []
+	},
+	"male_Nothing": {
+		"count": 0,
+		"label_list": []
+	},
+	"female_Nothing": {
+		"count": 0,
+		"label_list": []
+	}
+}

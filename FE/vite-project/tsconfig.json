@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    // "baseUrl": "./src",
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["*"]
+    },
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting  : develop에 올릴 때는 false로!*/
+    "strict": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": false
+  },
+  "include": [
+    "src",
+    "src/main.tsx",
+    "vite-env.d.ts",
+    "notification.d.ts",
+    "type.d.ts"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

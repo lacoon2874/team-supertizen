@@ -1,0 +1,667 @@
+collections {
+	group {
+		name: "main_layout";
+		parts {
+			part {
+				name: "bg";
+				type: RECT;
+				description {
+					state: "default" 0.0;
+					color: 10 29 35 255;
+				}
+			}
+			part {
+				name: "left_top_padding";
+				type: SPACER;
+				description {
+					state: "default" 0.0;
+					align: 0 0;
+				}
+			}
+			part {
+				name: "right_bottom_padding";
+				type: SPACER;
+				description {
+					state: "default" 0.0;
+					align: 1 1;
+				}
+			}
+			part {
+				name: "elm.swallow.content";
+				type: SWALLOW;
+				description {
+					state: "default" 0.0;
+					max: -1 760;
+					rel1 {
+						to: "left_top_padding";
+						offset: 100 0;
+					} 
+					rel2 {
+						to: "right_bottom_padding";
+						offset: -100 0;
+					}
+				}
+			}
+		}
+	}
+	group {
+		name: "menu_scroller";
+		parts {
+			part {
+				name: "bg";
+				type: RECT;
+				description {
+					state: "default" 0.0;
+					color: 255 0 0 255;
+				}
+			}
+		}
+	}
+	group {
+		name: "main_menu_wrapper";
+		parts {
+			part {
+				name: "bg";
+				type: RECT;
+				description {
+					state: "default" 0.0;
+					color: 34 41 45 255;
+				}
+			}
+			part {
+				name: "left_top_padding";
+				type: SPACER;
+				description {
+					state: "default" 0.0;
+					align: 0 0;
+				}
+			}
+			part {
+				name: "right_bottom_padding";
+				type: SPACER;
+				description {
+					state: "default" 0.0;
+					align: 1 1;
+				}
+			}
+			part {
+				name: "elm.swallow.content";
+				type: SWALLOW;
+				description {
+					state: "default" 0.0;
+					rel1 {
+						to: "left_top_padding";
+						offset: 50 30;
+					}
+					rel2 {
+						to: "right_bottom_padding";
+						offset: -50 -30;
+					}
+				}
+			}
+		}
+	}
+	group {
+		name: "elm/button/base/image_button";
+		parts {
+			part {
+				name: "left_top_padding";
+				type: SPACER;
+				description {
+					state: "default" 0.0;
+					align: 0 0;
+				}
+			}
+			part {
+				name: "right_bottom_padding";
+				type: SPACER;
+				description {
+					state: "default" 0.0;
+					align: 1 1;
+				}
+			}
+			part {
+				name: "elm.swallow.content";
+				type: SWALLOW;
+				description {
+					state: "default" 0.0;
+					rel1.to: "left_top_padding";
+					rel2.to: "right_bottom_padding";
+					align: 0.5 0.5;
+				}
+			}
+		}
+		programs {
+			program {
+				name: "clicked";
+				signal: "mouse,clicked,*";
+				source: "*";
+				action: SIGNAL_EMIT "elm,action,click" "";
+			}
+		}
+	}
+	group {
+		name: "elm/button/base/text_button";
+		parts {
+			part {
+				name: "bg";
+				type: RECT;
+				description {
+					state: "default" 0.0;
+					color: 54 59 63 255;
+				}
+			}
+			part {
+				name: "left_top_padding";
+				type: SPACER;
+				description {
+					state: "default" 0.0;
+					align: 0 0;
+				}
+			}
+			part {
+				name: "right_bottom_padding";
+				type: SPACER;
+				description {
+					state: "default" 0.0;
+					align: 1 1;
+				}
+			}
+			part {
+				name: "elm.text";
+				type: TEXT;
+				description {
+					state: "default" 0.0;
+					rel1 {
+						to: "left_top_padding";
+					}
+					rel2 {
+						to: "right_bottom_padding";
+					}
+					align: 0.5 0.5;
+					text {
+						size: 35;
+					}
+				}
+			}
+		}
+		programs {
+			program {
+				name: "clicked";
+				signal: "mouse,clicked,*";
+				source: "*";
+				action: SIGNAL_EMIT "elm,action,click" "";
+			}
+		}
+	}
+	group {
+		inherit: "elm/button/base/text_button";
+		name: "elm/button/base/text_green_button";
+		parts {
+			part {
+				name: "bg";
+				type: RECT;
+				description {
+					state: "default" 0.0;
+					color: 57 156 125 255;
+				}
+			}
+		}
+	}
+	group {
+		inherit: "elm/button/base/text_button";
+		name: "elm/button/base/text_gray_button";
+		parts {
+			part {
+				name: "bg";
+				type: RECT;
+				description {
+					state: "default" 0.0;
+					color: 219 219 219 255;
+				}
+			}
+			part {
+				name: "elm.text";
+				type: TEXT;
+				description {
+					state: "default" 0.0;
+					rel1 {
+						to: "left_top_padding";
+					}
+					rel2 {
+						to: "right_bottom_padding";
+					}
+					align: 0.5 0.5;
+					text {
+						size: 30;
+					}
+					color: 0 0 0 255;
+				}
+			}
+		}
+	}
+	group {
+		name: "course_wrapper";
+		parts {
+			part {
+				name: "bg";
+				type: RECT;
+				description {
+					state: "default" 0.0;
+					color: 54 89 81 255;
+				}
+			}
+			part {
+				name: "left_top_padding";
+				type: SPACER;
+				description {
+					state: "default" 0.0;
+					align: 0 0;
+				}
+			}
+			part {
+				name: "right_bottom_padding";
+				type: SPACER;
+				description {
+					state: "default" 0.0;
+					align: 1 1;
+				}
+			}
+			part {
+				name: "elm.swallow.content";
+				type: SWALLOW;
+				description {
+					state: "default" 0.0;
+					align: 0.5 0.5;
+					rel1 {
+						offset: 20 30;
+						to: "left_top_padding";
+					}
+					rel2 {
+						offset: -20 -20;
+						to: "right_bottom_padding";
+					}
+				}
+			}
+		}
+	}
+	group {
+		name: "course_image_wrapper";
+		parts {
+			part {
+				name: "bg";
+				type: RECT;
+				description {
+					state: "default" 0.0;
+					color: 57 156 125 255;
+				}
+			}
+			part {
+				name: "left_top_padding";
+				type: SPACER;
+				description {
+					state: "default" 0.0;
+					align: 0 0;
+				}
+			}
+			part {
+				name: "right_bottom_padding";
+				type: SPACER;
+				description {
+					state: "default" 0.0;
+					align: 1 1;
+				}
+			}
+			part {
+				name: "elm.swallow.content";
+				type: SWALLOW;
+				description {
+					state: "default" 0.0;
+					align: 0.5 0.5;
+					rel1 {
+						offset: 15 15;
+						to: "left_top_padding";
+					}
+					rel2 {
+						offset: -15 -15;
+						to: "right_bottom_padding";
+					}
+				}
+			}
+		}
+	}
+	group {
+		name: "outfit_wrapper";
+		parts {
+			part {
+				name: "bg";
+				type: RECT;
+				description {
+					state: "default" 0.0;
+					color: 54 59 63 255;
+				}
+			}
+			part {
+				name: "left_top_padding";
+				type: SPACER;
+				description {
+					state: "default" 0.0;
+					align: 0 0;
+				}
+			}
+			part {
+				name: "right_bottom_padding";
+				type: SPACER;
+				description {
+					state: "default" 0.0;
+					align: 1 1;
+				}
+			}
+			part {
+				name: "elm.swallow.content";
+				type: SWALLOW;
+				description {
+					state: "default" 0.0;
+					align: 0.5 0.5;
+					rel1 {
+						offset: 10 20;
+						to: "left_top_padding";
+					}
+					rel2 {
+						offset: -10 -10;
+						to: "right_bottom_padding";
+					}
+				}
+			}
+		}
+	}
+	group {
+		name: "inside_layout";
+		parts {
+			part {
+				name: "bg";
+				type: RECT;
+				description {
+					state: "default" 0.0;
+					color: 10 29 35 255;
+				}
+			}
+			part {
+				name: "left_top_padding";
+				type: SPACER;
+				description {
+					state: "default" 0.0;
+					align: 0 0;
+				}
+			}
+			part {
+				name: "right_bottom_padding";
+				type: SPACER;
+				description {
+					state: "default" 0.0;
+					align: 1 1;
+				}
+			}
+			part {
+				name: "elm.swallow.content";
+				type: SWALLOW;
+				description {
+					state: "default" 0.0;
+					rel1 {
+						to: "left_top_padding";
+						offset: 100 50;
+					} 
+					rel2 {
+						to: "right_bottom_padding";
+						offset: -100 0;
+					}
+				}
+			}
+		}
+	}
+	group {
+		name: "tab_wrapper";
+		parts {
+			part {
+				name: "bg";
+				type: RECT;
+				description {
+					state: "default" 0.0;
+					color: 34 41 45 255;
+				}
+			}
+			part {
+				name: "left_top_padding";
+				type: SPACER;
+				description {
+					state: "default" 0.0;
+					align: 0 0;
+				}
+			}
+			part {
+				name: "right_bottom_padding";
+				type: SPACER;
+				description {
+					state: "default" 0.0;
+					align: 1 1;
+				}
+			}
+			part {
+				name: "elm.swallow.content";
+				type: SWALLOW;
+				description {
+					state: "default" 0.0;
+					rel1 {
+						to: "left_top_padding";
+						offset: 20 30;
+					}
+					rel2 {
+						to: "right_bottom_padding";
+						offset: -20 -30;
+					}
+				}
+			}
+		}
+	}
+	group {
+		name: "profile_wrapper";
+		script {
+			public check_state = 0;
+		}
+		parts {
+			part {
+				name: "bg";
+				type: RECT;
+				description {
+					state: "default" 0.0;
+					color: 217 217 217 255;
+				}
+				description {
+					state: "select" 0.0;
+					color: 99 144 214 255;
+				}
+			}
+			part {
+				name: "left_top_padding";
+				type: SPACER;
+				description {
+					state: "default" 0.0;
+					align: 0 0;
+				}
+			}
+			part {
+				name: "right_bottom_padding";
+				type: SPACER;
+				description {
+					state: "default" 0.0;
+					align: 1 1;
+				}
+			}
+			part {
+				name: "elm.swallow.content";
+				type: SWALLOW;
+				description {
+					state: "default" 0.0;
+					rel1 {
+						to: "left_top_padding";
+						offset: 10 15;
+					}
+					rel2 {
+						to: "right_bottom_padding";
+						offset: -10 -15;
+					}
+				}
+			}
+		}
+		programs {
+			program {
+				name: "clicked";
+				signal: "select";
+				source: "*";
+				script {
+					if(get_int(check_state) == 0){
+						set_state(PART:"bg", "select", 0.0);
+						set_int(check_state, 1);
+					}
+					else{
+						set_state(PART:"bg", "default", 0.0);
+						set_int(check_state, 0);
+					}
+				}
+			}
+		}
+	}
+	group {
+		name: "empty_layout";
+		parts {
+			part {
+				name: "bg";
+				type: RECT;
+				description {
+					state: "default" 0.0;
+					color: 255 255 255 0;
+				}
+			}
+			part {
+				name: "left_top_padding";
+				type: SPACER;
+				description {
+					state: "default" 0.0;
+					align: 0 0;
+				}
+			}
+			part {
+				name: "right_bottom_padding";
+				type: SPACER;
+				description {
+					state: "default" 0.0;
+					align: 1 1;
+				}
+			}
+			part {
+				name: "elm.swallow.content";
+				type: SWALLOW;
+				description {
+					state: "default" 0.0;
+					rel1.to: "left_top_padding";
+					rel2.to: "right_bottom_padding";
+				}
+			}
+		}
+	}
+	group {
+		name: "image_wrapper";
+		parts {
+			part {
+				name: "bg";
+				type: RECT;
+				description	{
+					state: "default" 0.0;
+					color: 233 233 233 255;
+				}
+			}
+			part {
+				name: "left_top_padding";
+				type: SPACER;
+				description {
+					state: "default" 0.0;
+					align: 0 0;
+				}
+			}
+			part {
+				name: "right_bottom_padding";
+				type: SPACER;
+				description {
+					state: "default" 0.0;
+					align: 1 1;
+				}
+			}
+			part {
+				name: "elm.swallow.content";
+				type: SWALLOW;
+				description {
+					state: "default" 0.0;
+					rel1 {
+						to: "left_top_padding";
+						offset: 0 0;
+					}
+					rel2 {
+						to: "right_bottom_padding";
+						offset: 0 0;
+					}
+				}
+			}
+		}
+	}
+	group {
+		name: "elm/label/base/description_text";
+		parts {
+			part {
+				name: "bg";
+				type: RECT;
+				description	{
+					state: "default" 0.0;
+					color: 233 233 233 255;
+					min: 600 100;
+					max: 600 100;
+				}
+			}
+			part {
+				name: "left_top_padding";
+				type: SPACER;
+				description {
+					state: "default" 0.0;
+					align: 0 0;
+				}
+			}
+			part {
+				name: "right_bottom_padding";
+				type: SPACER;
+				description {
+					state: "default" 0.0;
+					align: 1 1;
+				}
+			}
+			part {
+				name: "elm.text";
+				type: TEXT;
+				description {
+					state: "default" 0.0;
+					rel1 {
+						to: "left_top_padding";
+						offset: 0 0;
+					}
+					rel2 {
+						to: "right_bottom_padding";
+						offset: 0 0;
+					}
+					color: 0 0 0 255;
+					text {
+						size: 40;
+						align: 0.05 0.5;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,1 @@
+res/contents/edje_res/sample.edj:

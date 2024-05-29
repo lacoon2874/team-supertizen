@@ -1,0 +1,53 @@
+version: "0.0.0"
+
+services:
+  supertizen_frontend:
+    container_name: supertizen_frontend
+    build:
+      context: ./FE/vite-project
+      dockerfile: Dockerfile
+    image: supertizen_frontend_img
+    volumes:
+      - /etc/letsencrypt/:/etc/nginx/ssl/
+      - /home/ubuntu/clothes_images/:/usr/share/nginx/images/
+      - /home/ubuntu/profile_images/:/usr/share/nginx/profile_images/
+      - /home/ubuntu/outfit_images/:/usr/share/nginx/outfit_images/
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - supertizen_net
+    environment:
+      - TZ=Asia/Seoul
+
+  supertizen_backend:
+    container_name: supertizen_backend
+    build:
+      context: ./BE/smartclothing
+      dockerfile: Dockerfile
+    image: supertizen_backend_img
+    volumes:
+      - /home/ubuntu/outfit_images/:/app/outfit_images/
+    ports:
+      - "8080:8080"
+      - "65432:65432"
+    networks:
+      - supertizen_net
+    environment:
+      - TZ=Asia/Seoul
+
+  supertizen_machine_learning:
+    container_name: supertizen_machine_learning
+    build:
+      context: ./ML/machinelearning
+      dockerfile: Dockerfile
+    image: supertizen_machine_learning_img
+    ports:
+      - "8000:8000"
+    networks:
+      - supertizen_net
+    environment:
+      - TZ=Asia/Seoul
+
+networks:
+  supertizen_net:
